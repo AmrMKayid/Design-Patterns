@@ -1,4 +1,4 @@
-package IntroToDesignPatterns;
+package IntroToDesignPatterns.Duck;
 
 public class Squeak implements QuackBehavior {
     @Override

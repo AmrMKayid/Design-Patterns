@@ -1,4 +1,4 @@
-package IntroToDesignPatterns;
+package IntroToDesignPatterns.Duck;
 
 public abstract class Duck {
 

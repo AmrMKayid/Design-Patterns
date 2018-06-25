@@ -1,4 +1,4 @@
-package IntroToDesignPatterns;
+package IntroToDesignPatterns.Duck;
 
 public class ModelDuck extends Duck {
     public ModelDuck() {
