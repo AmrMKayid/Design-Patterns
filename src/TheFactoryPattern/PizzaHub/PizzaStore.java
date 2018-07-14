@@ -2,7 +2,7 @@ package TheFactoryPattern.PizzaHub;
 
 public abstract class PizzaStore {
 
-    public Pizza orderPizza(String type) {
+    public Pizza orderPizza(PizzaType type) {
         Pizza pizza;
         pizza = createPizza(type);
 
@@ -19,5 +19,5 @@ public abstract class PizzaStore {
      * @param type: Type of the Pizza
      * @return
      */
-    protected abstract Pizza createPizza(String type);
+    protected abstract Pizza createPizza(PizzaType type);
 }

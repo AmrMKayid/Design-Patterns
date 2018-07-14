@@ -2,7 +2,7 @@ package TheFactoryPattern.PizzaHub;
 
 public class CaliforniaStylePizzaStore extends PizzaStore {
     @Override
-    protected Pizza createPizza(String type) {
+    protected Pizza createPizza(PizzaType type) {
         return null;
     }
 //    @Override

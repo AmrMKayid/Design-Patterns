@@ -2,15 +2,18 @@ package TheFactoryPattern.PizzaHub;
 
 public class ChicagoPizzaStore extends PizzaStore {
     @Override
-    protected Pizza createPizza(String type) {
-        if (type.equals("cheese")) {
-            return new ChicagoStyleCheesePizza();
-        } else if (type.equals("veggie")) {
-            return new ChicagoStyleVeggiePizza();
-        } else if (type.equals("clam")) {
-            return new ChicagoStyleClamPizza();
-        } else if (type.equals("pepperoni")) {
-            return new ChicagoStylePepperoniPizza();
-        } else return null;
+    protected Pizza createPizza(PizzaType type) {
+        switch (type) {
+            case CHEESE:
+                return new ChicagoStyleCheesePizza();
+            case VEGGIE:
+                return new ChicagoStyleVeggiePizza();
+            case CLAM:
+                return new ChicagoStyleClamPizza();
+            case PEPPERONI:
+                return new ChicagoStylePepperoniPizza();
+            default:
+                return null;
+        }
     }
 }
