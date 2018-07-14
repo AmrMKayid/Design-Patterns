@@ -1,15 +1,10 @@
 package TheFactoryPattern.PizzaHub;
 
-public class PizzaStore {
-    SimplePizzaFactory factory;
-
-    public PizzaStore(SimplePizzaFactory factory) {
-        this.factory = factory;
-    }
+public abstract class PizzaStore {
 
     public Pizza orderPizza(String type) {
         Pizza pizza;
-        pizza = factory.createPizza(type);
+        pizza = createPizza(type);
 
         pizza.prepare();
         pizza.bake();
@@ -18,4 +13,11 @@ public class PizzaStore {
 
         return pizza;
     }
+
+    /**
+     * The Factory Method
+     * @param type: Type of the Pizza
+     * @return
+     */
+    protected abstract Pizza createPizza(String type);
 }
