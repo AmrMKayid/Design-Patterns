@@ -1,4 +1,7 @@
-package TheFactoryPattern.PizzaHub;
+package TheFactoryPattern.PizzaHub.Stores;
+
+import TheFactoryPattern.PizzaHub.Pizzas.Pizza;
+import TheFactoryPattern.PizzaHub.PizzaType;
 
 public class CaliforniaStylePizzaStore extends PizzaStore {
     @Override
