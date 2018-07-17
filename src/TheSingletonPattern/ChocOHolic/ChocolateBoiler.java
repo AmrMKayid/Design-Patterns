@@ -11,7 +11,14 @@ public class ChocolateBoiler {
         boiled = false;
     }
 
-    public ChocolateBoiler getInstance() {
+    /**
+     * A static class method to ensure that the class is SINGLETON and only have ONE Instance object
+     * it's also synchronized to handle the multithreading problem
+     * and force every thread to wait its turn before it can enter the method.
+     *
+     * @return uniqueInstance Singleton Object
+     */
+    public static synchronized ChocolateBoiler getInstance() {
         if (uniqueInstance == null) {
             uniqueInstance = new ChocolateBoiler();
         }
