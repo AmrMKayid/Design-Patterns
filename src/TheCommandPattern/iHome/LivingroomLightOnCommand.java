@@ -11,4 +11,9 @@ public class LivingroomLightOnCommand implements Command {
     public void execute() {
         light.on();
     }
+
+    @Override
+    public void undo() {
+
+    }
 }

@@ -49,5 +49,34 @@ public class RemoteLoader {
         remoteControl.offButtonWasPushed(2);
         remoteControl.onButtonWasPushed(3);
         remoteControl.offButtonWasPushed(3);
+
+
+        System.out.println("\n#---------- Remote Control with Undo | Light ----------#\n");
+
+        remoteControl.onButtonWasPushed(0);
+        remoteControl.offButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPushed();
+        remoteControl.offButtonWasPushed(0);
+        remoteControl.onButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPushed();
+
+
+        System.out.println("\n#---------- Remote Control with Undo | Ceiling Fan ----------#\n");
+
+        CeilingFanLowCommand ceilingFanLow =
+                new CeilingFanLowCommand(ceilingFan);
+        CeilingFanHighCommand ceilingFanHigh =
+                new CeilingFanHighCommand(ceilingFan);
+        remoteControl.setCommand(0, ceilingFanLow, ceilingFanOff);
+        remoteControl.setCommand(1, ceilingFanHigh, ceilingFanOff);
+        remoteControl.onButtonWasPushed(0);
+        remoteControl.offButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPushed();
+        remoteControl.onButtonWasPushed(1);
+        System.out.println(remoteControl);
+        remoteControl.undoButtonWasPushed();
     }
 }
