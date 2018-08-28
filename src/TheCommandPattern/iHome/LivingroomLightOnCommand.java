@@ -1,9 +1,9 @@
 package TheCommandPattern.iHome;
 
-public class LightOnCommand implements Command {
+public class LivingroomLightOnCommand implements Command {
     Light light;
 
-    public LightOnCommand(Light light) {
+    public LivingroomLightOnCommand(Light light) {
         this.light = light;
     }
 

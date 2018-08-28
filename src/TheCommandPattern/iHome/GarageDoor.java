@@ -1,28 +1,29 @@
 package TheCommandPattern.iHome;
 
 public class GarageDoor {
+    String location;
 
-    public GarageDoor() {
-
+    public GarageDoor(String location) {
+        this.location = location;
     }
 
     public void up() {
-        System.out.println("Garage Door is Open");
+        System.out.println(location + " garage Door is Up");
     }
 
     public void down() {
-        System.out.println("Garage Door is Close");
+        System.out.println(location + " garage Door is Down");
     }
 
     public void stop() {
-        System.out.println("Garage Door is Stop");
+        System.out.println(location + " garage Door is Stopped");
     }
 
     public void lightOn() {
-        System.out.println("Light is On!");
+        System.out.println(location + " garage light is on");
     }
 
     public void lightOff() {
-        System.out.println("Light is Off!");
+        System.out.println(location + " garage light is off");
     }
 }
